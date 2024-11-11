@@ -38,8 +38,8 @@ export default function () {
                     delay: 5000,
                     disableOnInteraction: false,
                 }}
-                effect="fade" // Effetto di transizione "fade"
-                speed={1000} // Durata della transizione (in millisecondi)
+                effect="fade"
+                speed={1000}
                 pagination={{ clickable: true }}
                 loop={true}
             >

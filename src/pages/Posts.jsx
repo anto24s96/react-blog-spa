@@ -7,13 +7,18 @@ import CardPost from "../components/CardPost";
 const apiUrl = import.meta.env.VITE_BASE_API_URL;
 
 export default function () {
-    // Inizializza posts come array vuoto
+    // State per contenere i post
     const [posts, setPosts] = useState([]);
+    // State per la pagina corrente
     const [currPage, setCurrPage] = useState(1);
+    // State per il numero totale di pagine
     const [totalPages, setTotalPages] = useState(0);
+    // State per il loading
     const [loading, setLoading] = useState(false);
+    // State per l'errore
     const [error, setError] = useState(null);
 
+    // Fetch per recuperare i post
     const fetchPosts = async (page = currPage) => {
         setLoading(true);
         setError(null);
